@@ -125,7 +125,7 @@ public class StringifyJsonTest {
                 .put("timestamp", new java.util.Date(1672531200000L))
                 .put("other_field", 24);
 
-        final String outputValue = "Struct{created_at=Sun Jan 01 07:00:00 ICT 2023,decimal_value=42,time=Sun Jan 01 07:00:00 ICT 2023,timestamp=Sun Jan 01 07:00:00 ICT 2023,other_field=24}";
+        final String outputValue = "Struct{created_at=Sun Jan 01 07:00:00 GMT+07:00 2023,decimal_value=42,time=Sun Jan 01 07:00:00 GMT+07:00 2023,timestamp=Sun Jan 01 07:00:00 GMT+07:00 2023,other_field=24}";
         final String outputSchema = "[Field{name=created_at, index=0, schema=Schema{STRING}}, Field{name=decimal_value, index=1, schema=Schema{STRING}}, Field{name=time, index=2, schema=Schema{STRING}}, Field{name=timestamp, index=3, schema=Schema{STRING}}, Field{name=other_field, index=4, schema=Schema{INT32}}]";
 
         runAssertions(valueSchema, inputValue, outputSchema, outputValue);
