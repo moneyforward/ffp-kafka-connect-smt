@@ -1,6 +1,6 @@
-package com.moneyforward.smt.converter;
+package com.moneyforward.ffp.smt.converter;
 
-import com.moneyforward.smt.converter.fieldConverter.*;
+import com.moneyforward.ffp.smt.converter.fieldConverter.*;
 import org.apache.kafka.connect.data.*;
 import org.apache.kafka.connect.data.Date;
 import org.apache.kafka.connect.errors.ConnectException;

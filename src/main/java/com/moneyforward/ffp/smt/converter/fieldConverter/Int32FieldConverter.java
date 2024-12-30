@@ -14,35 +14,21 @@
  * limitations under the License.
  */
 
-package com.moneyforward.smt.converter.fieldConverter;
+package com.moneyforward.ffp.smt.converter.fieldConverter;
 
 import org.apache.kafka.connect.data.Schema;
-import org.apache.kafka.connect.errors.DataException;
-import org.bson.BsonBinary;
+import org.bson.BsonInt32;
 import org.bson.BsonValue;
 
-import java.nio.ByteBuffer;
+public class Int32FieldConverter extends FieldConverter {
 
-public class BytesFieldConverter extends FieldConverter {
-
-    public BytesFieldConverter() {
-        super(Schema.BYTES_SCHEMA);
+    public Int32FieldConverter() {
+        super(Schema.INT32_SCHEMA);
     }
 
     @Override
     public BsonValue toBsonValue(Object data) {
-
-        //obviously SinkRecords may contain different types
-        //to represent byte arrays
-        if(data instanceof ByteBuffer)
-            return new BsonBinary(((ByteBuffer) data).array());
-
-        if(data instanceof byte[])
-            return new BsonBinary((byte[])data);
-
-        throw new DataException("error: bytes field conversion failed to due"
-                + " unexpected object type "+ data.getClass().getName());
-
+        return new BsonInt32((Integer) data);
     }
 
 }

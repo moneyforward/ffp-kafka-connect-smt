@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-package com.moneyforward.smt.converter.fieldConverter;
+package com.moneyforward.ffp.smt.converter.fieldConverter;
 
 import org.apache.kafka.connect.data.Schema;
-import org.bson.BsonInt32;
+import org.bson.BsonBoolean;
 import org.bson.BsonValue;
 
-public class Int8FieldConverter extends FieldConverter {
+public class BooleanFieldConverter extends FieldConverter {
 
-    public Int8FieldConverter() {
-        super(Schema.INT8_SCHEMA);
+    public BooleanFieldConverter() {
+        super(Schema.BOOLEAN_SCHEMA);
     }
 
-    @Override
     public BsonValue toBsonValue(Object data) {
-        return new BsonInt32(((Byte) data).intValue());
+        return new BsonBoolean((Boolean) data);
     }
 
 }
