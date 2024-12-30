@@ -5,7 +5,7 @@ This lib implements Kafka connect SMT (Single Message Transformation) to convert
 Use it in connector config file
 ```
 "transforms": "stringifyjson",
-"transforms.stringifyjson.type": "com.moneyforward.smt.StringifyJson$Value",
+"transforms.stringifyjson.type": "com.moneyforward.ffp.smt.StringifyJson$Value",
 "transforms.stringifyjson.target_fields": "field1,field2",
 ```
 
