@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.moneyforward.smt.converter.fieldConverter;
+package com.moneyforward.ffp.smt.converter.fieldConverter;
 
-import org.apache.kafka.connect.data.Schema;
-import org.bson.BsonBoolean;
+import org.apache.kafka.connect.data.Time;
+import org.bson.BsonDateTime;
 import org.bson.BsonValue;
 
-public class BooleanFieldConverter extends FieldConverter {
+public class TimeFieldConverter extends FieldConverter {
 
-    public BooleanFieldConverter() {
-        super(Schema.BOOLEAN_SCHEMA);
+    public TimeFieldConverter() {
+        super(Time.SCHEMA);
     }
 
+    @Override
     public BsonValue toBsonValue(Object data) {
-        return new BsonBoolean((Boolean) data);
+        return new BsonDateTime(((java.util.Date)data).getTime());
     }
-
 }

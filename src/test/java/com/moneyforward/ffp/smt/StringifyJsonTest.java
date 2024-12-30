@@ -1,4 +1,4 @@
-package com.moneyforward.smt;
+package com.moneyforward.ffp.smt;
 
 import io.confluent.connect.avro.AvroData;
 import org.apache.avro.generic.GenericData;

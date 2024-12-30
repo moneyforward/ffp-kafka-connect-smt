@@ -1,7 +1,7 @@
-package com.moneyforward.smt;
+package com.moneyforward.ffp.smt;
 
-import com.moneyforward.smt.converter.Converter;
-import com.moneyforward.smt.converter.JsonConverter;
+import com.moneyforward.ffp.smt.converter.Converter;
+import com.moneyforward.ffp.smt.converter.JsonConverter;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.ConnectRecord;
 import org.apache.kafka.connect.data.*;

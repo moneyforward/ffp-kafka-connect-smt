@@ -1,4 +1,4 @@
-package com.moneyforward.smt.converter;
+package com.moneyforward.ffp.smt.converter;
 
 import org.apache.kafka.connect.data.Field;
 import org.bson.BsonDocument;

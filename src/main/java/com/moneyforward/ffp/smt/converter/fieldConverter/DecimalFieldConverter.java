@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.moneyforward.smt.converter.fieldConverter;
+package com.moneyforward.ffp.smt.converter.fieldConverter;
 
 import org.apache.kafka.connect.data.Decimal;
 import org.apache.kafka.connect.errors.DataException;
